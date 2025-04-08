@@ -1,1 +1,45 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary: "#ef476f";
+  --color-secondary: "#818d92";
+  --color-tertiary: "#f1dede";
+  --color-background: "#0D0907";
+  --color-frost: #f8f8ff;
+
+  --font-rose: "Red Rose", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-frost);
+  font-family: var(--font-rose);
+}
+
+.bg-gradient1 {
+  background: linear-gradient(45deg, #f8f8ff, #ef476f, #818d92, #0d0907);
+}
+
+.bg-gradient2 {
+  background: linear-gradient(to right, #ef476f, #818d92, #f1dede, #0d0907);
+}
+
+.bg-gradient3 {
+  background: linear-gradient(135deg, #0d0907, #818d92, #f1dede, #ef476f);
+}
+
+.bg-gradient4 {
+  background: linear-gradient(to right, #ff6b96, #9aa7ac, #f7e8e8);
+}
+
+.bg-gradient5 {
+  background: linear-gradient(45deg, #e0dfff, #ff97b7, #607481, #241d1b);
+}
+
+.bg-gradient6 {
+  background: linear-gradient(135deg, #292321, #56a690, #f0d5d5, #fa5c85);
+}
