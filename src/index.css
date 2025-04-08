@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: "#ef476f";
-  --color-secondary: "#818d92";
-  --color-tertiary: "#f1dede";
-  --color-background: "#0D0907";
   --color-frost: #f8f8ff;
+  --color-primary: #ef476f;
+  --color-secondary: #818d92;
+  --color-tertiary: #f1dede;
+  --color-background: #0d0907;
 
   --font-rose: "Red Rose", sans-serif;
 }
