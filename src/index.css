@@ -8,6 +8,7 @@
   --color-background: #0d0907;
 
   --font-rose: "Red Rose", sans-serif;
+  --font-source: "Source Sans 3", sans-serif;
 }
 
 html {
@@ -17,7 +18,7 @@ html {
 body {
   background-color: var(--color-background);
   color: var(--color-frost);
-  font-family: var(--font-rose);
+  font-family: var(--font-source);
 }
 
 .bg-gradient1 {

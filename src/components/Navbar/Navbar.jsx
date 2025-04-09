@@ -7,107 +7,87 @@ function Navbar() {
 
   return (
     <>
-      {/* Desktop Navbar */}
-      <nav className="flex md:py-10 md:justify-center md:items-center">
-        <menu className="gap-32 text-xl font-medium md:flex max-md:hidden">
+      {/* Desktop */}
+      <nav className="flex items-center px-10 py-6 md:justify-center">
+        <menu className="hidden text-xl gap-x-24 md:flex">
           <Link
-            to="/"
+            to={"/"}
             className="transition duration-500 hover:text-primary hover:scale-110"
           >
             Home
           </Link>
           <Link
-            to="/about"
-            className="transition duration-500 hover:text-primary hover:scale-110"
-          >
-            About
-          </Link>
-          <Link
-            to="/projects"
+            to={"/projects"}
             className="transition duration-500 hover:text-primary hover:scale-110"
           >
             Projects
           </Link>
           <Link
-            to="/contact"
+            to={"/about"}
+            className="transition duration-500 hover:text-primary hover:scale-110"
+          >
+            About
+          </Link>
+          <Link
+            to={"/contact"}
             className="transition duration-500 hover:text-primary hover:scale-110"
           >
             Contact
           </Link>
         </menu>
+
+        <div
+          onClick={toggleMenu}
+          className={` md:hidden`}
+        >
+          <i className="text-3xl ri-menu-5-line"></i>
+        </div>
       </nav>
 
-      {/* Mobile Navbar */}
-      <nav className={`md:hidden transition-colors duration-700 ${isOpen ? "bg-black" : "bg-transparent"}`}>
-        {/* Menu Icon */}
-        <div className="p-6">
-          {/* Menu Icon */}
-          <i
-            className={`absolute top-5 left-5 text-3xl text-white transition-all duration-300 transform ${
-              isOpen
-                ? "opacity-0 scale-75 rotate-45"
-                : "opacity-100 scale-100 rotate-0"
-            }`}
-            onClick={toggleMenu}
-            style={{ pointerEvents: isOpen ? "none" : "auto" }}
-            title="Open Menu"
-          >
-            <i className="ri-menu-5-line"></i>
-          </i>
+      {/* Mobile */}
 
-          {/* Close Icon */}
-          <i
-            className={`absolute top-5 left-5 text-3xl text-white transition-all duration-300 transform ${
-              isOpen
-                ? "opacity-100 scale-100 rotate-0"
-                : "opacity-0 scale-75 -rotate-45"
-            }`}
-            onClick={toggleMenu}
-            style={{ pointerEvents: isOpen ? "auto" : "none" }}
-            title="Close Menu"
-          >
-            <i className="ri-close-line"></i>
-          </i>
-        </div>
-
-        {/* Sliding Menu */}
-        <menu
-          className={`h-screen max-sm:w-[75%] md:w-[40%] transform transition-transform duration-500 ${
-            isOpen ? "translate-x-0" : "-translate-x-full"
-          }`}
+        <nav
+          className={`absolute top-0 left-0 flex flex-col h-screen gap-8 px-10 py-6 bg-black w-full z-10 sm:w-[60%] transform transition-transform duration-500 ease-in-out
+          ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
         >
-          <menu className="flex flex-col gap-10 p-6 text-2xl">
+          <div onClick={toggleMenu}>
+            <i className="text-3xl ri-close-line"></i>
+          </div>
+          <menu className="flex flex-col gap-10 text-2xl">
             <Link
-              to="/"
-              onClick={toggleMenu}
+              to={"/"}
               className="transition duration-500 hover:text-primary hover:scale-110"
             >
               Home
             </Link>
             <Link
-              to="/about"
-              onClick={toggleMenu}
-              className="transition duration-500 hover:text-primary hover:scale-110"
-            >
-              About
-            </Link>
-            <Link
-              to="/projects"
-              onClick={toggleMenu}
+              to={"/projects"}
               className="transition duration-500 hover:text-primary hover:scale-110"
             >
               Projects
             </Link>
             <Link
-              to="/contact"
-              onClick={toggleMenu}
+              to={"/about"}
+              className="transition duration-500 hover:text-primary hover:scale-110"
+            >
+              About
+            </Link>
+            <Link
+              to={"/contact"}
               className="transition duration-500 hover:text-primary hover:scale-110"
             >
               Contact
             </Link>
           </menu>
-        </menu>
-      </nav>
+        </nav>
+     
+
+      {/* Overlay for mobile menu */}
+
+        <div
+          onClick={toggleMenu}
+          className={`fixed inset-0 z-0 transition duration-700 ${isOpen ? "bg-black/60 backdrop-blur-sm" : "hidden"}`}
+        ></div>
     </>
   );
 }
