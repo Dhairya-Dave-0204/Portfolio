@@ -1,9 +1,11 @@
 import React from "react";
-import { Hero } from "../../components/component_index";
+import { Hero, ProjectBento } from "../../components/component_index";
+
 function Home() {
   return (
     <>
-      <Hero />
+      {/* <Hero /> */}
+      <ProjectBento />
     </>
   );
 }

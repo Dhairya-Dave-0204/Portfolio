@@ -5,14 +5,14 @@ import { SplineComputer } from "../component_index";
 function Hero() {
   const navigate = useNavigate();
   return (
-    <section className="flex flex-col-reverse items-center h-auto px-6 gap-x-5 gap-y-10 lg:flex-row lg:h-[90vh] md:px-12 lg:px-24">
+    <section className="flex mb-16 md:mb-28 flex-col-reverse items-center h-auto px-6 gap-x-5 gap-y-10 lg:flex-row lg:h-[90vh] md:px-12 lg:px-24">
       {/* Text Content */}
       <div className="w-full text-center lg:w-2/5 lg:text-left">
-        <h1 className="text-2xl font-semibold sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+        <h1 className="text-3xl font-semibold  font-rose md:text-4xl lg:text-5xl xl:text-6xl">
           Hello!
         </h1>
 
-        <h1 className="mb-5 text-3xl font-bold sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-primary">
+        <h1 className="mb-5 text-4xl font-bold font-rose md:text-5xl lg:text-6xl xl:text-7xl text-primary">
           I am Dhairya Dave
         </h1>
 

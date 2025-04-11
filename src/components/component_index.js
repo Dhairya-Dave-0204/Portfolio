@@ -3,6 +3,7 @@ import Footer from "./Footer/Footer";
 import SplineGlobe from "./SplineGlobe/SplineGlobe";
 import SplineComputer from "./SplineComputer/SplineComputer";
 import Hero from "./Hero/Hero";
+import ProjectBento from "./ProjectBento/ProjectBento";
 
 export {
     Navbar,
@@ -10,4 +11,5 @@ export {
     SplineGlobe,
     SplineComputer,
     Hero,
+    ProjectBento,
 }
