@@ -4,7 +4,7 @@ import { skills } from "./data";
 function SkillCards() {
   return (
     <>
-      <div className="px-6 mb-16 md:mb-28 md:px-28 lg:px-40">
+      <div className="px-6 pt-20 mt-28 md:pt-28 md:px-28 lg:px-40">
         <h1 className="mb-6 text-5xl font-bold text-center md:text-6xl text-primary font-rose">
           My Skills
         </h1>
@@ -17,7 +17,7 @@ function SkillCards() {
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="p-6 transition duration-500 border border-t-2 group hover:border-quaternary border-primary rounded-2xl"
+              className="p-6 transition duration-500 border border-t-2 group hover:border-primary/80 hover:scale-105 border-secondary/20 rounded-2xl"
             >
                 <i className={`text-5xl ${skill.color} ${skill.icon}`}></i>
                 <h2 className="text-3xl font-semibold">{skill.category}</h2>

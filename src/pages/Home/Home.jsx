@@ -5,8 +5,8 @@ function Home() {
   return (
     <>
       <Hero />
-      <ProjectBento />
-      {/* <SkillCards /> */}
+      {/* <ProjectBento /> */}
+      <SkillCards />
     </>
   );
 }

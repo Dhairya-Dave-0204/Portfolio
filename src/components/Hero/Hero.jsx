@@ -2,18 +2,24 @@ import React from "react";
 import { SplineBackground } from "../../components/component_index";
 //
 function Hero() {
-  
   return (
     <>
-      <div className="relative flex items-center justify-center w-full sm:h-[40vh] md:h-[75vh] max-md:mt-24">
+      <div className="relative flex items-center justify-center w-full min-h-[70vh] sm:min-h-[70vh] md:min-h-[90vh] px-6 py-24 md:py-32 overflow-hidden">
         <SplineBackground />
-        <div className="absolute z-20 flex flex-col items-center justify-center w-full h-full text-center max-md:px-10">
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-[#ff6ec7] via-[#ff4fa3] via-[#907dff] to-[#34e2ff] bg-clip-text text-transparent animate-gradient">
-          Hello! I am Dhairya
-        </h1>
-        <p className="max-w-xl mx-auto mt-4 text-gray-300 md:text-xl lg:text-2xl">
-        Web developer, hackathon finalist, and tech enthusiast blending creativity with code.
-        </p>
+
+        {/* Instead of absolute, use relative and padding to center */}
+        <div className="z-20 flex flex-col items-center justify-center space-y-6 text-center">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-[#ff6ec7] via-[#ff4fa3] via-[#907dff] to-[#34e2ff] bg-clip-text text-transparent animate-gradient">
+            Hello! I am Dhairya Dave
+          </h1>
+          <p className="max-w-xl mx-auto text-gray-300 md:text-xl lg:text-2xl">
+            Web developer, hackathon finalist, and tech enthusiast blending
+            creativity with code.
+            <span className="block mt-2 sm:hidden">
+              On a journey from MERN stack mastery to advancing AI-powered
+              solutions.
+            </span>
+          </p>
         </div>
       </div>
 
