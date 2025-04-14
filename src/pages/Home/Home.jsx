@@ -1,11 +1,12 @@
 import React from "react";
-import { Hero, ProjectBento } from "../../components/component_index";
+import { Hero, ProjectBento, SkillCards } from "../../components/component_index";
 
 function Home() {
   return (
     <>
-      {/* <Hero /> */}
+      <Hero />
       <ProjectBento />
+      {/* <SkillCards /> */}
     </>
   );
 }

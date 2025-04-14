@@ -12,25 +12,25 @@ function Navbar() {
         <menu className="hidden text-xl gap-x-24 md:flex">
           <Link
             to={"/"}
-            className="transition duration-500 hover:text-primary hover:scale-110"
+            className="transition duration-500 hover:text-secondary hover:scale-110"
           >
             Home
           </Link>
           <Link
             to={"/projects"}
-            className="transition duration-500 hover:text-primary hover:scale-110"
+            className="transition duration-500 hover:text-secondary hover:scale-110"
           >
             Projects
           </Link>
           <Link
             to={"/about"}
-            className="transition duration-500 hover:text-primary hover:scale-110"
+            className="transition duration-500 hover:text-secondary hover:scale-110"
           >
             About
           </Link>
           <Link
             to={"/contact"}
-            className="transition duration-500 hover:text-primary hover:scale-110"
+            className="transition duration-500 hover:text-secondary hover:scale-110"
           >
             Contact
           </Link>
@@ -47,7 +47,7 @@ function Navbar() {
       {/* Mobile */}
 
         <nav
-          className={`absolute top-0 left-0 flex flex-col h-screen gap-8 px-10 py-6 bg-black w-full z-10 sm:w-[60%] transform transition-transform duration-500 ease-in-out
+          className={`absolute top-0 left-0 flex flex-col h-screen gap-8 px-10 py-6 bg-black w-full z-30 sm:w-[60%] transform transition-transform duration-500 ease-in-out
           ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
         >
           <div onClick={toggleMenu}>
@@ -56,25 +56,25 @@ function Navbar() {
           <menu className="flex flex-col gap-10 text-2xl">
             <Link
               to={"/"}
-              className="transition duration-500 hover:text-primary hover:scale-110"
+              className="transition duration-500 hover:text-secondary hover:scale-110"
             >
               Home
             </Link>
             <Link
               to={"/projects"}
-              className="transition duration-500 hover:text-primary hover:scale-110"
+              className="transition duration-500 hover:text-secondary hover:scale-110"
             >
               Projects
             </Link>
             <Link
               to={"/about"}
-              className="transition duration-500 hover:text-primary hover:scale-110"
+              className="transition duration-500 hover:text-secondary hover:scale-110"
             >
               About
             </Link>
             <Link
               to={"/contact"}
-              className="transition duration-500 hover:text-primary hover:scale-110"
+              className="transition duration-500 hover:text-secondary hover:scale-110"
             >
               Contact
             </Link>
@@ -86,7 +86,7 @@ function Navbar() {
 
         <div
           onClick={toggleMenu}
-          className={`fixed inset-0 z-0 transition duration-700 ${isOpen ? "bg-black/60 backdrop-blur-sm" : "hidden"}`}
+          className={`fixed inset-0 z-20 transition duration-700 ${isOpen ? "bg-black/60 backdrop-blur-md" : "hidden"}`}
         ></div>
     </>
   );
