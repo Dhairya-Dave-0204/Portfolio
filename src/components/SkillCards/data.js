@@ -26,10 +26,10 @@ export const skills = [
   {
     id: 4,
     category: "Tools",
-    count: 4,
+    count: 5,
     icon: "ri-terminal-line",
     color: "text-[#ef4444]",
-    technologies: ["Git", "GitHub", "Vercel", "Netlify"],
+    technologies: ["Git", "GitHub", "Postman", "Vercel", "Netlify"],
   },
   {
     id: 5,
