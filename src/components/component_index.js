@@ -6,6 +6,7 @@ import Hero from "./Hero/Hero";
 import ProjectBento from "./ProjectBento/ProjectBento";
 import SkillCards from "./SkillCards/SkillCards";
 import SplineBackground from "./SplineBackground/SplineBackground";
+import ContactForm from "./ContactForm/ContactForm";
 
 export {
     Navbar,
@@ -16,4 +17,5 @@ export {
     Hero,
     ProjectBento,
     SkillCards,
+    ContactForm,
 }

@@ -13,7 +13,7 @@ function Hero() {
             Hello! I am Dhairya Dave
           </h1>
           <p className="max-w-xl mx-auto text-gray-300 md:text-xl lg:text-2xl">
-            Web developer, hackathon finalist, and tech enthusiast blending
+            Web developer, national level hackathon finalist, and tech enthusiast blending
             creativity with code.
             <span className="block mt-2 sm:hidden">
               On a journey from MERN stack mastery to advancing AI-powered

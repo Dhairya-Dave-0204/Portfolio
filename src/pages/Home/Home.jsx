@@ -1,5 +1,5 @@
 import React from "react";
-import { Hero, ProjectBento, SkillCards } from "../../components/component_index";
+import { Hero, ProjectBento, SkillCards, ContactForm } from "../../components/component_index";
 
 function Home() {
   return (
@@ -7,6 +7,7 @@ function Home() {
       <Hero />
       {/* <ProjectBento /> */}
       <SkillCards />
+      <ContactForm />
     </>
   );
 }
