@@ -4,7 +4,7 @@ import { SplineGlobe } from "../component_index";
 function ContactForm() {
   return (
     <>
-      <div className="flex flex-col w-full min-h-screen mt-20 md:mt-96 lg:mt-32 lg:flex-row lg:h-screen">
+      <div className="flex flex-col w-full min-h-screen px-6 mt-20 md:px-28 lg:px-40 md:mt-96 lg:mt-32 lg:flex-row lg:h-screen">
         {/* Contact Form */}
         <div className="flex items-center justify-center w-full p-6 lg:w-1/2 sm:p-10">
           <div className="w-full">
@@ -74,7 +74,7 @@ function ContactForm() {
                   onClick={() => navigate("/about")}
                   className="relative px-6 py-3 overflow-hidden text-sm font-semibold text-black bg-gray-200 rounded-md cursor-pointer sm:text-lg md:text-xl group"
                 >
-                  <span className="absolute inset-0 w-full h-full transition-transform duration-300 ease-in-out transform -translate-x-full bg-secondary group-hover:translate-x-0" />
+                  <span className="absolute inset-0 w-full h-full transition-transform duration-300 ease-in-out transform -translate-x-full bg-primary group-hover:translate-x-0" />
                   <span className="relative z-10 transition-colors duration-500 ease-in-out group-hover:text-frost">
                     Send message
                   </span>
