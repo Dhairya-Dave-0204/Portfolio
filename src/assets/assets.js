@@ -1,13 +1,13 @@
-import header1 from "./header1.jpg";
-import header2 from "./header2.jpg";
-import header3 from "./header3.jpg";
-import header4 from "./header4.jpg";
-import header5 from "./header5.jpg";
+import Project1 from "./Project1.png";
+import Project2 from "./Project2.png";
+import Project3 from "./Project3.png";
+import Project4 from "./Project4.png";
+import Project5 from "./Project5.png";
 
 export const assets = {
-    header1,
-    header2,
-    header3,
-    header4,
-    header5,
+    Project1,
+    Project2,
+    Project3,
+    Project4,
+    Project5,
 }

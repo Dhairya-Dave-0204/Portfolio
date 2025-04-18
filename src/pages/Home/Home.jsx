@@ -5,7 +5,7 @@ function Home() {
   return (
     <>
       <Hero />
-      {/* <ProjectBento /> */}
+      <ProjectBento />
       <SkillCards />
       <ContactForm />
     </>
