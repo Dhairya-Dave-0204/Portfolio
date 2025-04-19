@@ -2,12 +2,12 @@
 
 @theme {
   --color-frost: #f8f8ff;
-  --color-primary: #C77DFF;
+  --color-primary: #c77dff;
   --color-secondary: #ff4fa3;
   --color-tertiary: #907dff;
   --color-quaternary: #34e2ff;
   --color-background: #080404;
-  --color-background-dark: #10002B;
+  --color-background-dark: #10002b;
   --color-background-light: #240046;
 
   --font-rose: "Red Rose", sans-serif;
