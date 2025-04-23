@@ -7,6 +7,7 @@ import ProjectBento from "./ProjectBento/ProjectBento";
 import SkillCards from "./SkillCards/SkillCards";
 import SplineBackground from "./SplineBackground/SplineBackground";
 import ContactForm from "./ContactForm/ContactForm";
+import ShortAbout from "./ShortAbout/ShortAbout";
 
 export {
     Navbar,
@@ -18,4 +19,5 @@ export {
     ProjectBento,
     SkillCards,
     ContactForm,
+    ShortAbout,
 }

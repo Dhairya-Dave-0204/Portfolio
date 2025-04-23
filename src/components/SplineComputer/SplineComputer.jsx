@@ -4,7 +4,10 @@ import Spline from "@splinetool/react-spline";
 function SplineComputer() {
   return (
     <>
-    <Spline scene="https://prod.spline.design/nyw8MokFFilADKDc/scene.splinecode" />
+      <Spline
+        className="mix-blend-lighten"
+        scene="https://prod.spline.design/nyw8MokFFilADKDc/scene.splinecode"
+      />
     </>
   );
 }
