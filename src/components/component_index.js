@@ -8,6 +8,7 @@ import SkillCards from "./SkillCards/SkillCards";
 import SplineBackground from "./SplineBackground/SplineBackground";
 import ContactForm from "./ContactForm/ContactForm";
 import ShortAbout from "./ShortAbout/ShortAbout";
+import Loader from "./Loader/Loader";
 
 export {
     Navbar,
@@ -20,4 +21,5 @@ export {
     SkillCards,
     ContactForm,
     ShortAbout,
+    Loader,
 }

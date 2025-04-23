@@ -22,7 +22,7 @@ function Navbar() {
   return (
     <>
       {/* Desktop */}
-      <nav className="flex items-center px-10 py-6 md:justify-center">
+      <nav id="nav" className="flex items-center px-10 py-6 md:justify-center">
         <menu className="hidden text-xl gap-x-24 md:flex">
           <Link
             to={"/"}
@@ -56,7 +56,7 @@ function Navbar() {
       </nav>
 
       {/* Mobile */}
-      <nav
+      <nav id="nav" 
         className={`absolute top-0 left-0 flex flex-col h-screen gap-8 px-10 py-6 bg-black w-full z-40 sm:w-[60%] transform transition-transform duration-500 ease-in-out
         ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
       >
