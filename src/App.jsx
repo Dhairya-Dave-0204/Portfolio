@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Suspense } from "react";
+import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import { Navbar, Footer, Loader } from "./components/component_index.js";
 import { Home, About, Contact, Projects } from "./pages/page_index.js";
@@ -20,14 +20,12 @@ function App() {
       ) : (
         <>
           <Navbar />
-          <Suspense fallback={<Loader />}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/projects" element={<Projects />} />
             </Routes>
-          </Suspense>
           <Footer />
         </>
       )}
