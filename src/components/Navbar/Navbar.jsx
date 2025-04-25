@@ -30,24 +30,30 @@ function Navbar() {
           >
             Home
           </Link>
-          <Link
-            to={"/projects"}
+          <a
+            href="#skill"
+            className="transition duration-500 hover:text-secondary hover:scale-110"
+          >
+            Skills
+          </a>
+          <a
+            href="#project"
             className="transition duration-500 hover:text-secondary hover:scale-110"
           >
             Projects
-          </Link>
-          <Link
-            to={"/about"}
+          </a>
+          <a
+            href="#about"
             className="transition duration-500 hover:text-secondary hover:scale-110"
           >
             About
-          </Link>
-          <Link
-            to={"/contact"}
+          </a>
+          <a
+            href="#contact"
             className="transition duration-500 hover:text-secondary hover:scale-110"
           >
             Contact
-          </Link>
+          </a>
         </menu>
 
         <div onClick={toggleMenu} className={`md:hidden`}>
@@ -66,28 +72,39 @@ function Navbar() {
         <menu className="flex flex-col gap-10 text-2xl">
           <Link
             to={"/"}
+            onClick={toggleMenu}
             className="transition duration-500 hover:text-secondary hover:scale-110"
           >
             Home
           </Link>
-          <Link
-            to={"/projects"}
+          <a
+            href="#skill"
+            onClick={toggleMenu}
+            className="transition duration-500 hover:text-secondary hover:scale-110"
+          >
+            Skills
+          </a>
+          <a
+            href="#project"
+            onClick={toggleMenu}
             className="transition duration-500 hover:text-secondary hover:scale-110"
           >
             Projects
-          </Link>
-          <Link
-            to={"/about"}
+          </a>
+          <a
+            href="#about"
+            onClick={toggleMenu}
             className="transition duration-500 hover:text-secondary hover:scale-110"
           >
             About
-          </Link>
-          <Link
-            to={"/contact"}
+          </a>
+          <a
+            href="#contact"
+            onClick={toggleMenu}
             className="transition duration-500 hover:text-secondary hover:scale-110"
           >
             Contact
-          </Link>
+          </a>
         </menu>
       </nav>
 

@@ -62,7 +62,7 @@ function ContactForm() {
 
   return (
     <>
-      <div className="flex flex-col w-full min-h-screen px-6 mt-20 md:px-28 lg:px-40 md:mt-96 lg:mt-32 lg:flex-row lg:h-screen">
+      <section id="contact" className="flex flex-col w-full px-6 mt-20 lg:min-h-screen md:px-28 lg:px-40 md:mt-96 lg:mt-32 lg:flex-row lg:h-screen">
         {/* Contact Form */}
         <div className="flex items-center justify-center w-full p-6 lg:w-1/2 sm:p-10">
           <div className="w-full">
@@ -155,7 +155,7 @@ function ContactForm() {
             <SplineGlobe />
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 function ProjectBento() {
   return (
     <>
-      <div className="w-full px-6 py-8 mt-28 md:px-28 lg:px-40">
+      <section id="project" className="w-full px-6 py-8 mt-28 md:px-28 lg:px-40">
         <h1 className="mb-6 text-5xl font-bold text-center text-primary md:text-6xl font-rose">
           My Projects
         </h1>
@@ -92,7 +92,7 @@ function ProjectBento() {
             ))}
           </Swiper>
         </div>
-      </div>
+      </section>
 
       <style jsx>{`
         /* Custom styling for Swiper navigation buttons */

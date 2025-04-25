@@ -4,7 +4,7 @@ import { skills } from "./data";
 function SkillCards() {
   return (
     <>
-      <div className="px-6 pt-20 mt-28 md:pt-28 md:px-28 lg:px-40">
+      <section id="skill" className="px-6 pt-20 mt-28 md:pt-28 md:px-28 lg:px-40">
         <h1 className="mb-6 text-5xl font-bold text-center md:text-6xl text-primary font-rose">
           My Skills
         </h1>
@@ -37,7 +37,7 @@ function SkillCards() {
             </div>
           ))}
         </div>
-      </div>
+      </section>
     </>
   );
 }

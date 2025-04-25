@@ -4,7 +4,7 @@ import { LazySpline } from "../component_index";
 function ShortAbout() {
   return (
     <>
-      <section className="px-6 mt-28 lg:px-40">
+      <section id="about" className="px-6 mt-28 lg:px-40">
         <h2 className="mb-12 text-5xl font-bold text-center text-primary font-rose lg:text-6xl">
           About Me
         </h2>
