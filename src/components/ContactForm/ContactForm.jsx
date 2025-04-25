@@ -1,7 +1,65 @@
-import React from "react";
-import { LazySpline, SplineGlobe } from "../component_index";
+import React, { useState } from "react";
+import { SplineGlobe } from "../component_index";
+import { toast } from "react-toastify";
 
 function ContactForm() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData({ ...formData, [id]: value });
+  };
+
+  const toastDisplay = (message, status) => {
+    if (status) {
+      toast.success(message, {
+      });
+    } else {
+      toast.error(message, {
+      });
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        access_key: "a14bf5dd-003f-4db0-8b16-d1545324aae9",
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      }),
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      toastDisplay("Form Submitted Successfully", true);
+      setSuccess(true);
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    } else {
+      toastDisplay("Error in submitting the form", false);
+      setError(true);
+    }
+  };
+
   return (
     <>
       <div className="flex flex-col w-full min-h-screen px-6 mt-20 md:px-28 lg:px-40 md:mt-96 lg:mt-32 lg:flex-row lg:h-screen">
@@ -19,7 +77,7 @@ function ContactForm() {
             </div>
 
             {/* Form */}
-            <form className="space-y-8">
+            <form onSubmit={handleSubmit} className="space-y-8">
               <div className="flex flex-col gap-6 md:flex-row">
                 <div className="flex-1">
                   <label
@@ -32,6 +90,8 @@ function ContactForm() {
                     type="text"
                     id="name"
                     name="name"
+                    value={formData.name}
+                    onChange={handleChange}
                     placeholder="Enter your name"
                     className="w-full py-2 text-xl border-b-2 border-frost text-frost focus:outline-none focus:border-secondary"
                   />
@@ -47,6 +107,8 @@ function ContactForm() {
                     type="email"
                     id="email"
                     name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     placeholder="Enter your email address"
                     className="w-full py-2 text-xl border-b-2 border-frost text-frost focus:outline-none focus:border-secondary"
                   />
@@ -63,6 +125,9 @@ function ContactForm() {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   placeholder="Enter your message"
                   className="w-full text-xl resize-none border-b-1 border-frost text-frost focus:outline-none focus:border-secondary"
                 ></textarea>
@@ -71,7 +136,7 @@ function ContactForm() {
               {/* Submit */}
               <div className="mt-6 text-center lg:text-left">
                 <button
-                  onClick={() => navigate("/about")}
+                  type="submit"
                   className="relative px-6 py-3 overflow-hidden text-sm font-semibold text-black bg-gray-200 rounded-md cursor-pointer sm:text-lg md:text-xl group"
                 >
                   <span className="absolute inset-0 w-full h-full transition-transform duration-300 ease-in-out transform -translate-x-full bg-primary group-hover:translate-x-0" />
