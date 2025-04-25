@@ -7,7 +7,6 @@ function Hero() {
       <div className="relative flex items-center justify-center w-full min-h-[70vh] sm:min-h-[70vh] md:min-h-[90vh] px-6 py-24 md:py-32 overflow-hidden">
         <SplineBackground />
 
-        {/* Instead of absolute, use relative and padding to center */}
         <div className="z-20 flex flex-col items-center justify-center space-y-6 text-center">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-[#ff6ec7] via-[#ff4fa3] via-[#907dff] to-[#34e2ff] bg-clip-text text-transparent animate-gradient">
             Hello! I am Dhairya Dave

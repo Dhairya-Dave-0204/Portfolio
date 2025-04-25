@@ -1,5 +1,5 @@
 import React from "react";
-import { SplineComputer } from "../component_index";
+import { LazySpline } from "../component_index";
 
 function ShortAbout() {
   return (
@@ -12,7 +12,7 @@ function ShortAbout() {
         <div className="flex flex-col items-center gap-12 lg:flex-row">
           {/* Left Box (Image/Visual) */}
           <div className="w-full lg:w-1/2 h-[670px]">
-            <SplineComputer />
+          <LazySpline componentName="SplineComputer" />
           </div>
 
           {/* Right Box (Text Content) */}

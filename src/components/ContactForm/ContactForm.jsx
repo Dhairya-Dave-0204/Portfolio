@@ -1,5 +1,5 @@
 import React from "react";
-import { SplineGlobe } from "../component_index";
+import { LazySpline, SplineGlobe } from "../component_index";
 
 function ContactForm() {
   return (
