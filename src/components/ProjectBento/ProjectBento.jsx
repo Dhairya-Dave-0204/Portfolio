@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { projects } from "./data";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -10,7 +10,10 @@ import "swiper/css/pagination";
 function ProjectBento() {
   return (
     <>
-      <section id="project" className="w-full px-6 py-8 mt-28 md:px-28 lg:px-40">
+      <section
+        id="project"
+        className="w-full px-6 py-8 mt-28 md:px-28 lg:px-40"
+      >
         <h1 className="mb-6 text-5xl font-bold text-center text-primary md:text-6xl font-rose">
           My Projects
         </h1>
@@ -22,7 +25,7 @@ function ProjectBento() {
 
         <div className="relative swiper-container-custom">
           <Swiper
-            modules={[Navigation, Autoplay]}
+            modules={[Autoplay]}
             spaceBetween={24}
             slidesPerView={1}
             breakpoints={{
@@ -42,16 +45,15 @@ function ProjectBento() {
                 spaceBetween: 24,
               },
             }}
-            navigation={true}
             autoplay={{
               delay: 3000,
               disableOnInteraction: true,
             }}
             loop={true}
-            className="px-4 py-8 swiper-custom"
+            className="swiper-custom"
           >
             {projects.map((project) => (
-              <SwiperSlide key={project.id} className="h-full">
+              <SwiperSlide key={project.id} className="h-full cursor-grab ">
                 <div className="flex flex-col h-full transition-all duration-300 border border-gray-800 rounded-lg shadow-lg bg-background hover:shadow-xl hover:-translate-y-1 hover:border-purple-500/70">
                   <div className="relative h-48 overflow-hidden">
                     <img
@@ -75,14 +77,18 @@ function ProjectBento() {
                           to={project.github}
                           className="inline-block px-2 py-1 font-medium transition-colors rounded cursor-pointer bg-gradient-to-r from-pink-500 via-purple-500 to-blue-400 hover:from-pink-600 hover:via-purple-600 hover:to-blue-500"
                         >
-                          <button className="text-2xl cursor-pointer"><i class="ri-github-fill"></i></button>
+                          <button className="text-2xl cursor-pointer">
+                            <i class="ri-github-fill"></i>
+                          </button>
                         </Link>
-                        
+
                         <Link
                           to={project.demo}
                           className="inline-block px-2 py-1 font-medium transition-colors rounded cursor-pointer bg-gradient-to-r from-pink-500 via-purple-500 to-blue-400 hover:from-pink-600 hover:via-purple-600 hover:to-blue-500"
                         >
-                          <button className="text-2xl cursor-pointer"><i class="ri-global-fill"></i></button>
+                          <button className="text-2xl cursor-pointer">
+                            <i class="ri-global-fill"></i>
+                          </button>
                         </Link>
                       </div>
                     </div>
@@ -93,33 +99,6 @@ function ProjectBento() {
           </Swiper>
         </div>
       </section>
-
-      <style jsx>{`
-        /* Custom styling for Swiper navigation buttons */
-        :global(.swiper-button-prev),
-        :global(.swiper-button-next) {
-          background-color: rgba(0, 0, 0, 0.5);
-          backdrop-filter: blur(4px);
-          width: 40px;
-          height: 40px;
-          border-radius: 50%;
-          border: 1px solid #374151;
-          transition: all 0.3s ease;
-        }
-
-        :global(.swiper-button-prev:hover),
-        :global(.swiper-button-next:hover) {
-          background-color: rgba(139, 92, 246, 0.2);
-          border-color: rgba(167, 139, 250, 0.7);
-        }
-
-        :global(.swiper-button-prev:after),
-        :global(.swiper-button-next:after) {
-          font-size: 16px;
-          color: #d1d5db;
-          font-weight: bold;
-        }
-      `}</style>
     </>
   );
 }
