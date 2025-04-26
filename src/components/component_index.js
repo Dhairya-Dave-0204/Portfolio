@@ -9,8 +9,6 @@ import SplineBackground from "./SplineBackground/SplineBackground";
 import ContactForm from "./ContactForm/ContactForm";
 import ShortAbout from "./ShortAbout/ShortAbout";
 import Loader from "./Loader/Loader";
-import LazySpline from "./LazySpline/LazySpline";
-
 export {
     Navbar,
     Footer,
@@ -23,5 +21,4 @@ export {
     ContactForm,
     ShortAbout,
     Loader,
-    LazySpline,
 }

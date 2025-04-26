@@ -1,5 +1,5 @@
 import React from "react";
-import { LazySpline, SplineComputer } from "../component_index";
+import { SplineComputer } from "../component_index";
 
 function ShortAbout() {
   return (
@@ -12,8 +12,7 @@ function ShortAbout() {
         <div className="flex flex-col items-center gap-12 lg:flex-row">
           {/* Left Box (Image/Visual) */}
           <div className="w-full lg:w-1/2 h-[670px]">
-          {/* <LazySpline componentName="SplineComputer" /> */}
-          <SplineComputer />
+            <SplineComputer />
           </div>
 
           {/* Right Box (Text Content) */}
@@ -63,7 +62,7 @@ function ShortAbout() {
               <button className="relative flex items-center gap-2 px-6 py-2 overflow-hidden text-lg font-medium rounded-md cursor-pointer bg-frost text-background group">
                 <span className="absolute inset-0 w-full h-full transition-transform duration-300 ease-in-out transform -translate-x-full bg-primary group-hover:translate-x-0" />
                 <span className="relative z-10 transition-colors duration-500 ease-in-out group-hover:text-frost">
-                  Download Resume{" "}<i className="text-xl ri-download-line"></i>
+                  Download Resume <i className="text-xl ri-download-line"></i>
                 </span>
               </button>
             </a>
