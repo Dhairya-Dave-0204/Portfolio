@@ -10,7 +10,6 @@ function ShortAbout() {
         </h2>
 
         <div className="flex flex-col items-center gap-12 lg:flex-row">
-          {/* Left Box (Image/Visual) */}
           <div className="w-full lg:w-1/2 h-[670px]">
             <SplineComputer />
           </div>
